@@ -1,0 +1,179 @@
+[gd_scene load_steps=18 format=3 uid="uid://c12kwerhlnlam"]
+
+[ext_resource type="Script" path="res://Options.cs" id="1_vwfid"]
+[ext_resource type="Texture2D" uid="uid://qcfdst13f3pn" path="res://3182.jpg" id="2_b6u4o"]
+
+[sub_resource type="Curve" id="Curve_noxw4"]
+
+[sub_resource type="CurveTexture" id="CurveTexture_pmhlh"]
+curve = SubResource("Curve_noxw4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04bn4"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = SubResource("CurveTexture_pmhlh")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Curve" id="Curve_fy67w"]
+
+[sub_resource type="CurveTexture" id="CurveTexture_382ig"]
+curve = SubResource("Curve_fy67w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_83jtn"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = SubResource("CurveTexture_382ig")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Curve" id="Curve_x5lfl"]
+
+[sub_resource type="CurveTexture" id="CurveTexture_4yfn1"]
+curve = SubResource("Curve_x5lfl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p06ew"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = SubResource("CurveTexture_4yfn1")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="MeshTexture" id="MeshTexture_3n3cu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qnnjn"]
+texture = SubResource("MeshTexture_3n3cu")
+
+[sub_resource type="MeshTexture" id="MeshTexture_2g21j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ulcuo"]
+texture = SubResource("MeshTexture_2g21j")
+
+[sub_resource type="MeshTexture" id="MeshTexture_2xolb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f47yy"]
+texture = SubResource("MeshTexture_2xolb")
+
+[node name="Options" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0980392, 0.356863, 0.486275, 1)
+script = ExtResource("1_vwfid")
+
+[node name="TempBack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 5350.0
+offset_bottom = 2349.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.177538, 0.217)
+size_flags_horizontal = 0
+texture = ExtResource("2_b6u4o")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 243.0
+offset_top = 263.0
+offset_right = -121.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="HFlowContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+
+[node name="Play Alone" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04bn4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_83jtn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p06ew")
+text = "Sound Effect"
+
+[node name="Play Together" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04bn4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_83jtn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p06ew")
+text = "Background Music"
+
+[node name="Graphics Quality" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04bn4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_83jtn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p06ew")
+text = "Graphics Quality"
+
+[node name="Back To Main Menu" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_04bn4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_83jtn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p06ew")
+text = "BACK TO 
+MAIN MENU"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 1069.0
+offset_top = 3.0
+offset_right = 1146.0
+offset_bottom = 33.0
+theme_override_constants/separation = 30
+
+[node name="Log Out" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_qnnjn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ulcuo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_f47yy")
+text = "LOG OUT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 49.0
+offset_top = 101.0
+offset_right = 1074.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0.392157, 0.239216, 0.580392, 1)
+theme_override_colors/font_shadow_color = Color(0.145098, 0.0117647, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 7
+theme_override_font_sizes/font_size = 70
+text = "Kalibangon Ko"
+horizontal_alignment = 1
